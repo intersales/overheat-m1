@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <menu>
+        <intersales_modules>
+            <title>InterSales Modules</title>
+            <sort_order>99</sort_order>
+            <children>
+                <intersales_overheat translate="title" module="intersales_overheat">
+                    <title>Overheat</title>
+                    <children>
+                        <manage translate="title" module="intersales_overheat">
+                            <title>Manage Eventhandler</title>
+                            <action>adminhtml/intersales_overheat_eventhandler/index</action>
+                        </manage>
+                    </children>
+                </intersales_overheat>
+            </children>
+        </intersales_modules>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <intersales_modules>
+                            <title>InterSales Modules</title>
+                            <children>
+                                <intersales_overheat translate="title" module="intersales_overheat">
+                                    <title>Overheat</title>
+                                    <children>
+                                        <manage_eventhandler translate="title" module="intersales_overheat">
+                                            <title>Manage Eventhandler</title>
+                                        </manage_eventhandler>
+                                    </children>
+                                </intersales_overheat>
+                            </children>
+                        </intersales_modules>
+                        <children>
+                            <config>
+                                <children>
+                                    <intersales_overheat translate="title">
+                                        <title>Intersales AG Modules - overheat</title>
+                                    </intersales_overheat>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

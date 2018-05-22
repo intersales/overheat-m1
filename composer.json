@@ -1,0 +1,15 @@
+{
+  "name": "magento-modules/overheat",
+  "type" :"magento-module",
+  "description" :"Easily integrate overheat in Magento.",
+  "authors": [
+    {
+      "name":"Daniel Rose",
+      "email":"dr@intersales.de",
+      "homepage": "http://www.intersales.de",
+      "role": "developer"
+    }
+  ], "require": {
+    "magento-hackathon/magento-composer-installer": "*"
+  }
+}

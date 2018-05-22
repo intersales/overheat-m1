@@ -1,0 +1,7 @@
+app/code/community/InterSales/*                             			app/code/community/InterSales/
+app/design/adminhtml/default/default/template/intersales/*  			app/design/adminhtml/default/default/template/intersales/
+app/design/frontend/base/default/layout/intersales_overheat.xml  		app/design/frontend/base/default/layout/intersales_overheat.xml
+app/design/frontend/base/default/template/intersales/*  				app/design/frontend/base/default/template/intersales/
+app/etc/modules/*                                           			app/etc/modules/
+app/locale/de_DE/*                                          			app/locale/de_DE/
+skin/frontend/base/default/js/intersales/*								skin/frontend/base/default/js/intersales/

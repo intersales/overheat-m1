@@ -1,0 +1,41 @@
+<?php
+/**
+ * @see InterSales_Overheat_Block_Adminhtml_System_Config_Gettrackingcode
+ */
+?>
+<script type="text/javascript">
+    //<![CDATA[
+    function getTrackingCode() {
+        var elem = $('<?php echo $this->getHtmlId() ?>');
+        var targetElem = $('intersales_overheat_general_tracking_code');
+
+        params = {
+            validate_code: $('intersales_overheat_general_validate_code').value
+        };
+
+        new Ajax.Request('<?php echo $this->getAjaxUrl() ?>', {
+            parameters: params,
+            onSuccess: function(transport) {
+                try {
+                    var json = transport.responseText.evalJSON(true);
+
+                    if(json.errorMessage != '') {
+                        elem.removeClassName('success').addClassName('fail');
+                        targetElem.value = '';
+                        $('get_tracking_code_result').update(json.errorMessage);
+                    } else {
+                        elem.removeClassName('fail').addClassName('success');
+                        targetElem.value = json.trackingCode;
+                        $('get_tracking_code_result').update('<?php echo $this->escapeHtml($this->getButtonLabel()) ?>');
+                    }
+                } catch (e) {
+                    $('get_tracking_code_result').update(e.message);
+                }
+            }
+        });
+    }
+    //]]>
+</script>
+<button onclick="javascript:getTrackingCode(); return false;" class="scalable" type="button" id="<?php echo $this->getHtmlId() ?>">
+    <span id="get_tracking_code_result"><?php echo $this->escapeHtml($this->getButtonLabel()) ?></span>
+</button>

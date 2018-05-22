@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <action method="addItem"><type>skin_js</type><name>js/intersales/overheat/helper.js</name></action>
+        </reference>
+        <reference name="footer">
+            <block type="intersales_overheat/jsRenderer" template="intersales/overheat/jsrenderer.phtml" name="intersales.overheat.jsrenderer" as="intersales_overheat_jsrenderer">
+                <action method="setCacheLifetime" />
+            </block>
+        </reference>
+    </default>
+</layout>
